@@ -267,6 +267,7 @@ function udp2icmp(ctx, desync)
 					if id_ then
 						id=id_.id
 						if b_debug then DLOG(string.format("udp2icmp: found mapped icmp identifier %04X",id)) end
+						id_.t=os.time() -- update time
 					else
 						DLOG("udp2icmp: mapped icmp identifier NOT found !")
 					end
